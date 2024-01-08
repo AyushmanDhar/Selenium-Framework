@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="AyushmanDhar.SeleniumFramework.TestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="TestErrorScenario(failed)">
+    <classes>
+      <class name="AyushmanDhar.SeleniumFramework.ErrorScenarioTest">
+        <methods>
+          <include name="wrongCartItem"/>
+          <include name="launchApplication"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- AyushmanDhar.SeleniumFramework.ErrorScenarioTest -->
+    </classes>
+  </test> <!-- TestErrorScenario(failed) -->
+</suite> <!-- Failed suite [Suite] -->
