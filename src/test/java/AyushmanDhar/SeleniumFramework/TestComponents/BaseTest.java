@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -31,17 +32,22 @@ public class BaseTest {
 		//Takes Browser value from command line if there is none take from properties file then create driver accordingly
 		
 		String browser=System.getProperty("Browser")!=null ? System.getProperty("Browser") : prop.getProperty("Browser");
+		String runMode=System.getProperty("runMode")!=null ? System.getProperty("runMode") : prop.getProperty("runMode");
 		if(browser.equals("chrome")) {
-			ChromeOptions options=new ChromeOptions();
-			String runMode=System.getProperty("runMode")!=null ? System.getProperty("runMode") : prop.getProperty("runMode");
+			ChromeOptions Coptions=new ChromeOptions();
 			if(runMode.contains("headless")) {
-				options.addArguments("headless");
+				Coptions.addArguments("headless");
 			}
-			driver=new ChromeDriver(options);
+			driver=new ChromeDriver(Coptions);
 			driver.manage().window().setSize(new Dimension(1920,1080));
 		}
 		if(browser.equals("edge")) {
-			driver=new EdgeDriver();
+			EdgeOptions Eoptions=new EdgeOptions();
+			if(runMode.contains("headless")) {
+				Eoptions.addArguments("headless");
+			}
+			driver=new EdgeDriver(Eoptions);
+			driver.manage().window().setSize(new Dimension(1920,1080));
 		}
 		
 		//Takes environment value from command line if there is none take from properties file
