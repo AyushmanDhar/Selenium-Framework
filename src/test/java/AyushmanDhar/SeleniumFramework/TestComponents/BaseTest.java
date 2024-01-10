@@ -34,19 +34,19 @@ public class BaseTest {
 		String browser=System.getProperty("Browser")!=null ? System.getProperty("Browser") : prop.getProperty("Browser");
 		String runMode=System.getProperty("runMode")!=null ? System.getProperty("runMode") : prop.getProperty("runMode");
 		if(browser.equals("chrome")) {
-			ChromeOptions Coptions=new ChromeOptions();
+			ChromeOptions chromeOptions=new ChromeOptions();
 			if(runMode.contains("headless")) {
-				Coptions.addArguments("headless");
+				chromeOptions.addArguments("headless");
 			}
-			driver=new ChromeDriver(Coptions);
+			driver=new ChromeDriver(chromeOptions);
 			driver.manage().window().setSize(new Dimension(1920,1080));
 		}
 		if(browser.equals("edge")) {
-			EdgeOptions Eoptions=new EdgeOptions();
+			EdgeOptions edgeOptions=new EdgeOptions();
 			if(runMode.contains("headless")) {
-				Eoptions.addArguments("headless");
+				edgeOptions.addArguments("headless");
 			}
-			driver=new EdgeDriver(Eoptions);
+			driver=new EdgeDriver(edgeOptions);
 			driver.manage().window().setSize(new Dimension(1920,1080));
 		}
 		
