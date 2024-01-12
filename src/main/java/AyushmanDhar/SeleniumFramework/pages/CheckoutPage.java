@@ -18,7 +18,7 @@ public class CheckoutPage extends AbstructComponents{
 	}
 	
 	@FindBy(xpath="//input[@placeholder='Select Country']")
-	WebElement countryBox;
+	private WebElement countryBox;
 	public void inputCountryBox(String countryName) {
 		countryBox.sendKeys(countryName);
 		Actions ac=new Actions(driver);
@@ -27,7 +27,7 @@ public class CheckoutPage extends AbstructComponents{
 	
 	
 	@FindBy(xpath="//a[text()='Place Order ']")
-	WebElement placeOrderButton;
+	private WebElement placeOrderButton;
 	public ConfirmationPage clickPaceOrderButton() {
 		placeOrderButton.click();
 		return new ConfirmationPage(driver);

@@ -17,11 +17,11 @@ public class LandingPage extends AbstructComponents {
 	
 
 	@FindBy(id="userEmail")
-	WebElement userEmail;
+	private WebElement userEmail;
 	@FindBy(id="userPassword")
-	WebElement userPassword;
+	private WebElement userPassword;
 	@FindBy(id="login")
-	WebElement loginButton;
+	private WebElement loginButton;
 	
 	public ProductCatelogue sendLoginDetails(String email,String password) {
 		userEmail.sendKeys(email);
@@ -31,7 +31,7 @@ public class LandingPage extends AbstructComponents {
 	}
 	
 	@FindBy(xpath="//div[@id='toast-container']/div")
-	WebElement loginToastContainer;
+	private WebElement loginToastContainer;
 	public String loginErrorMessage() {
 		waitUntilVisible(loginToastContainer);
 		return loginToastContainer.getText();

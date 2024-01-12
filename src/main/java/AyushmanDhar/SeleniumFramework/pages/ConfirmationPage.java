@@ -17,13 +17,13 @@ public class ConfirmationPage extends AbstructComponents{
 		PageFactory.initElements(driver, this);
 	}
 	@FindBy(tagName="h1")
-	WebElement confirmationMessage;
+	private WebElement confirmationMessage;
 	public boolean verifyConfirmationMessage() {
 		return (confirmationMessage.getText().strip().equals("THANKYOU FOR THE ORDER."));
 	}
 	
 	@FindBy(xpath="//td[@class='line-item product-info-column m-3']/div[@class='title']")
-	List<WebElement> orderedItemNames;
+	private List<WebElement> orderedItemNames;
 	public boolean confirmOrderItem(String productName) {
 		return(orderedItemNames.stream().anyMatch(s->s.getText().equals(productName)));
 	}

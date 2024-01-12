@@ -19,7 +19,7 @@ public class CartPage extends AbstructComponents {
 	}
 	
 	@FindBy(xpath="//div[@class='cart']//h3")
-	List<WebElement> cartItems;
+	private List<WebElement> cartItems;
 	By CartItemsBy=By.xpath("//div[@class='cart']//h3");
 	public List<WebElement> getCartItems(){
 		waitUntilVisibilityBy(CartItemsBy);
@@ -31,7 +31,7 @@ public class CartPage extends AbstructComponents {
 	}
 	
 	@FindBy(xpath="//button[contains(text(),'Checkout')]")
-	WebElement checkoutButton;
+	private WebElement checkoutButton;
 	public CheckoutPage clickCheckoutButton() {
 		checkoutButton.click();
 		CheckoutPage chp=new CheckoutPage(driver);

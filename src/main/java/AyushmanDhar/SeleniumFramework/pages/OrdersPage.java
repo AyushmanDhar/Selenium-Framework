@@ -17,7 +17,7 @@ public class OrdersPage extends CartPage {
 	}
 	
 	@FindBy(xpath="//td[2]")
-	List<WebElement> orderedItems;
+	private List<WebElement> orderedItems;
 	public Boolean verifyOrderedItem(String productName) {
 		return (orderedItems.stream().anyMatch(s->s.getText().equals(productName)));
 	}
