@@ -17,7 +17,7 @@ import AyushmanDhar.SeleniumFramework.pages.OrdersPage;
 import AyushmanDhar.SeleniumFramework.pages.ProductCatelogue;
 
 public class OrderPlaceTest extends BaseTest{
-	@Test(dataProvider="getData",groups="PurchaseOrder")
+	@Test(dataProvider="getValidCredentialsWithItems",groups="PurchaseOrder")
 	public void submitOrder(HashMap<String,String>input) throws IOException {
 		ProductCatelogue pc=lp.sendLoginDetails(input.get("email"), input.get("password"));
 		List<WebElement>listOfItems=pc.getProducts();
@@ -34,11 +34,11 @@ public class OrderPlaceTest extends BaseTest{
 		Assert.assertTrue(cfp.confirmOrderItem(input.get("product")));
 	}
 	
-	@Test(dependsOnMethods="submitOrder")
-	public void ordersTest() throws IOException {
-		lp.sendLoginDetails("soundbolt32@gmail.com", "AyushD123");
+	@Test(dataProvider="getValidCredentialWithItem", dependsOnMethods="submitOrder")
+	public void ordersTest(HashMap<String,String>input) throws IOException {
+		lp.sendLoginDetails(input.get("email"), input.get("password"));
 		OrdersPage op=lp.clickOrdersButton();
-		String productName="ZARA COAT 3";
+		String productName=input.get("product");
 		Assert.assertTrue(op.verifyOrderedItem(productName));
 	}
 	
@@ -47,16 +47,14 @@ public class OrderPlaceTest extends BaseTest{
 		return new Object[][] {{"soundbolt32@gmail.com","AyushD123","ZARA COAT 3"},{"dharayushman@gmail.com","AyushD123","IPHONE 13 PRO"}};
 	}*/
 	@DataProvider
-	public Object[][] getData() {
-		HashMap<String,String> hm1=new HashMap<String,String>();
-		hm1.put("email", "soundbolt32@gmail.com");
-		hm1.put("password", "AyushD123");
-		hm1.put("product", "ZARA COAT 3");
-		HashMap<String,String> hm2=new HashMap<String,String>();
-		hm2.put("email", "dharayushman@gmail.com");
-		hm2.put("password", "AyushD123");
-		hm2.put("product", "IPHONE 13 PRO");
-		return new Object[][] {{hm1},{hm2}};
+	public Object[][] getValidCredentialsWithItems() throws IOException {
+		List<HashMap<String,String>> data=getJSONDataToMap("ValidCredentialsWithItems.json");
+		return new Object[][] {{data.get(0)},{data.get(1)}};
+	}
+	@DataProvider
+	public Object[][] getValidCredentialWithItem() throws IOException {
+		List<HashMap<String,String>> data=getJSONDataToMap("ValidCredentialsWithItems.json");
+		return new Object[][] {{data.get(0)}};
 	}
 	
 	
