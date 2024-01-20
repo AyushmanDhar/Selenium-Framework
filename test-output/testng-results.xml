@@ -1,84 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-12T13:28:28 IST" name="Suite" finished-at="2024-01-12T13:28:43 IST" duration-ms="14676">
+  <suite started-at="2024-01-20T21:21:01 IST" name="Suite" finished-at="2024-01-20T21:21:12 IST" duration-ms="11076">
     <groups>
-      <group name="ErrorHandling">
-        <method signature="ErrorScenarioTest.errorLogin(java.util.HashMap)[pri:0, instance:AyushmanDhar.SeleniumFramework.ErrorScenarioTest@4331d187]" name="errorLogin" class="AyushmanDhar.SeleniumFramework.ErrorScenarioTest"/>
-      </group> <!-- ErrorHandling -->
       <group name="PurchaseOrder">
-        <method signature="OrderPlaceTest.submitOrder(java.util.HashMap)[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@26ceffa8]" name="submitOrder" class="AyushmanDhar.SeleniumFramework.OrderPlaceTest"/>
+        <method signature="OrderPlaceTest.submitOrder(java.util.HashMap)[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@2805d709]" name="submitOrder" class="AyushmanDhar.SeleniumFramework.OrderPlaceTest"/>
       </group> <!-- PurchaseOrder -->
     </groups>
-    <test started-at="2024-01-12T13:28:28 IST" name="TestErrorScenario" finished-at="2024-01-12T13:28:40 IST" duration-ms="11872">
-      <class name="AyushmanDhar.SeleniumFramework.ErrorScenarioTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AyushmanDhar.SeleniumFramework.ErrorScenarioTest@4331d187]" started-at="2024-01-12T13:28:28 IST" name="launchApplication" finished-at="2024-01-12T13:28:31 IST" duration-ms="3065" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="errorLogin(java.util.HashMap)[pri:0, instance:AyushmanDhar.SeleniumFramework.ErrorScenarioTest@4331d187]" started-at="2024-01-12T13:28:31 IST" name="errorLogin" data-provider="getInvalidCredentials" finished-at="2024-01-12T13:28:32 IST" duration-ms="281" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=AyushD123, email=soundbolt3@gmail.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- errorLogin -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:AyushmanDhar.SeleniumFramework.ErrorScenarioTest@4331d187]" started-at="2024-01-12T13:28:32 IST" name="driverQuit" finished-at="2024-01-12T13:28:32 IST" duration-ms="53" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AyushmanDhar.SeleniumFramework.ErrorScenarioTest@4331d187]" started-at="2024-01-12T13:28:32 IST" name="launchApplication" finished-at="2024-01-12T13:28:34 IST" duration-ms="2721" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="errorLogin(java.util.HashMap)[pri:0, instance:AyushmanDhar.SeleniumFramework.ErrorScenarioTest@4331d187]" started-at="2024-01-12T13:28:34 IST" name="errorLogin" data-provider="getInvalidCredentials" finished-at="2024-01-12T13:28:35 IST" duration-ms="809" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=AyushD1234, email=soundbolt32@gmail.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- errorLogin -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:AyushmanDhar.SeleniumFramework.ErrorScenarioTest@4331d187]" started-at="2024-01-12T13:28:35 IST" name="driverQuit" finished-at="2024-01-12T13:28:35 IST" duration-ms="36" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AyushmanDhar.SeleniumFramework.ErrorScenarioTest@4331d187]" started-at="2024-01-12T13:28:35 IST" name="launchApplication" finished-at="2024-01-12T13:28:38 IST" duration-ms="2562" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="wrongCartItem(java.util.HashMap)[pri:0, instance:AyushmanDhar.SeleniumFramework.ErrorScenarioTest@4331d187]" started-at="2024-01-12T13:28:38 IST" name="wrongCartItem" data-provider="getValidCredentialWithItem" finished-at="2024-01-12T13:28:40 IST" duration-ms="2145" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=AyushD123, product=ZARA COAT 3, email=soundbolt32@gmail.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wrongCartItem -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:AyushmanDhar.SeleniumFramework.ErrorScenarioTest@4331d187]" started-at="2024-01-12T13:28:40 IST" name="driverQuit" finished-at="2024-01-12T13:28:40 IST" duration-ms="38" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- AyushmanDhar.SeleniumFramework.ErrorScenarioTest -->
-    </test> <!-- TestErrorScenario -->
-    <test started-at="2024-01-12T13:28:28 IST" name="TestOrders" finished-at="2024-01-12T13:28:43 IST" duration-ms="14676">
+    <test started-at="2024-01-20T21:21:01 IST" name="TestOrders" finished-at="2024-01-20T21:21:12 IST" duration-ms="11057">
       <class name="AyushmanDhar.SeleniumFramework.OrderPlaceTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@26ceffa8]" started-at="2024-01-12T13:28:28 IST" name="launchApplication" finished-at="2024-01-12T13:28:31 IST" duration-ms="3065" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@2805d709]" started-at="2024-01-20T21:21:01 IST" name="launchApplication" finished-at="2024-01-20T21:21:05 IST" duration-ms="3248" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@26ceffa8]" started-at="2024-01-12T13:28:31 IST" name="submitOrder" data-provider="getValidCredentialsWithItems" finished-at="2024-01-12T13:28:34 IST" duration-ms="2903" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@2805d709]" started-at="2024-01-20T21:21:05 IST" name="submitOrder" data-provider="getValidCredentialsWithItems" finished-at="2024-01-20T21:21:08 IST" duration-ms="2954" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,15 +25,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@26ceffa8]" started-at="2024-01-12T13:28:34 IST" name="driverQuit" finished-at="2024-01-12T13:28:34 IST" duration-ms="36" status="PASS">
+        <test-method is-config="true" signature="driverQuit()[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@2805d709]" started-at="2024-01-20T21:21:08 IST" name="driverQuit" finished-at="2024-01-20T21:21:08 IST" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@26ceffa8]" started-at="2024-01-12T13:28:34 IST" name="launchApplication" finished-at="2024-01-12T13:28:37 IST" duration-ms="2610" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@2805d709]" started-at="2024-01-20T21:21:08 IST" name="launchApplication" finished-at="2024-01-20T21:21:09 IST" duration-ms="1560" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@26ceffa8]" started-at="2024-01-12T13:28:37 IST" name="submitOrder" data-provider="getValidCredentialsWithItems" finished-at="2024-01-12T13:28:40 IST" duration-ms="2833" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@2805d709]" started-at="2024-01-20T21:21:09 IST" name="submitOrder" data-provider="getValidCredentialsWithItems" finished-at="2024-01-20T21:21:12 IST" duration-ms="2952" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -108,30 +44,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@26ceffa8]" started-at="2024-01-12T13:28:40 IST" name="driverQuit" finished-at="2024-01-12T13:28:40 IST" duration-ms="37" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@26ceffa8]" started-at="2024-01-12T13:28:40 IST" name="launchApplication" finished-at="2024-01-12T13:28:42 IST" duration-ms="2612" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="ordersTest(java.util.HashMap)[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@26ceffa8]" started-at="2024-01-12T13:28:42 IST" name="ordersTest" data-provider="getValidCredentialWithItem" finished-at="2024-01-12T13:28:43 IST" depends-on-methods="AyushmanDhar.SeleniumFramework.OrderPlaceTest.submitOrder" duration-ms="378" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=AyushD123, product=ZARA COAT 3, email=soundbolt32@gmail.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ordersTest -->
-        <test-method is-config="true" signature="driverQuit()[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@26ceffa8]" started-at="2024-01-12T13:28:43 IST" name="driverQuit" finished-at="2024-01-12T13:28:43 IST" duration-ms="48" status="PASS">
+        <test-method is-config="true" signature="driverQuit()[pri:0, instance:AyushmanDhar.SeleniumFramework.OrderPlaceTest@2805d709]" started-at="2024-01-20T21:21:12 IST" name="driverQuit" finished-at="2024-01-20T21:21:12 IST" duration-ms="83" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
       </class> <!-- AyushmanDhar.SeleniumFramework.OrderPlaceTest -->
     </test> <!-- TestOrders -->
+    <test started-at="2024-01-20T21:21:12 IST" name="TestErrorScenario" finished-at="2024-01-20T21:21:12 IST" duration-ms="0">
+    </test> <!-- TestErrorScenario -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -20,7 +20,7 @@ public class ErrorScenarioTest extends BaseTest{
 		String errorMessage=lp.loginErrorMessage();
 		Assert.assertEquals(errorMessage, "Incorrect email or password.");
 	}
-	@Test(dataProvider="getValidCredentialWithItem")
+	@Test(dataProvider="getValidCredentialWithItem",groups= {"ErrorHandling"})
 	public void wrongCartItem(HashMap<String, String>input) throws IOException {
 		ProductCatelogue pc=lp.sendLoginDetails(input.get("email"), input.get("password"));
 		List<WebElement>listOfItems=pc.getProducts();

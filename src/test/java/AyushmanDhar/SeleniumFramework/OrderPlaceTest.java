@@ -34,7 +34,7 @@ public class OrderPlaceTest extends BaseTest{
 		Assert.assertTrue(cfp.confirmOrderItem(input.get("product")));
 	}
 	
-	@Test(dataProvider="getValidCredentialWithItem", dependsOnMethods="submitOrder")
+	@Test(dataProvider="getValidCredentialWithItem", dependsOnMethods="submitOrder",groups="PurchaseOrder")
 	public void ordersTest(HashMap<String,String>input) throws IOException {
 		lp.sendLoginDetails(input.get("email"), input.get("password"));
 		OrdersPage op=lp.clickOrdersButton();
